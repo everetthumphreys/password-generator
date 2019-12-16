@@ -1,0 +1,67 @@
+body {
+	background-image: url("/assets/wallpaper.png");
+	background-color: #F8B195;
+	color: #ffffff;
+	font-family: 'Ubuntu', sans-serif;
+	padding: 10px;
+}
+
+p {
+	margin: 5px 0px;
+}
+
+h1 {
+	margin: 10px 0px 20px;
+	text-align: center;
+}
+
+input[type=checkbox] {
+	margin-right: 0px;
+}
+
+.app-container {
+	background-color: #355C7D;
+	padding: 20px;
+	width: 350px;
+	margin: auto;
+	max-width: 100%;
+}
+
+.result-container {
+	background-color: rgba(0, 0, 0, 0.4);
+	align-items: center;
+	position: relative;
+	font-size: 18px;
+	letter-spacing: 1px;
+	padding: 12px 10px;
+	height: 50px;
+	width: 100%;
+}
+
+.result-container .btn {
+	font-size: 20px;
+	position: absolute;
+	top: 5px;
+	right: 5px;
+	height: 40px;
+	width: 40px;
+}
+
+.btn {
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-size: 16px;
+	padding: 8px 12px;
+	background-color: #F67280;
+}
+
+.btn-large {
+	display: block;
+	width: 100%;
+}
+
+.setting {
+	align-items: center;
+	margin: 15px 0;
+}
