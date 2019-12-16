@@ -1,5 +1,8 @@
 body {
-	background-image: url("/assets/wallpaper.png");
+	background-image: url("https://raw.githubusercontent.com/everetthumphreys/password-generator/master/assets/wallpaper.png");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: bottom;
 	background-color: #F8B195;
 	color: #ffffff;
 	font-family: 'Ubuntu', sans-serif;
@@ -21,10 +24,10 @@ input[type=checkbox] {
 
 .app-container {
 	background-color: #355C7D;
+	border: 5px solid #C06C84;
 	padding: 20px;
 	width: 350px;
 	margin: auto;
-	max-width: 100%;
 }
 
 .result-container {
