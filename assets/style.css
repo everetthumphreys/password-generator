@@ -8,6 +8,12 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 	padding: 10px;
 }
+.alert-primary {
+	display: none; 
+	background-color: #355C7D;
+	color: #ffffff;
+	border-color: #C06C84;
+}
 
 p {
 	margin: 5px 0px;
@@ -22,7 +28,6 @@ h2 {
 	height: 100px;
 	margin: auto;
 }
-
 
 .container {
 	background-color: #355C7D;
@@ -69,4 +74,29 @@ h2 {
 .setting {
 	text-align: center;
 	margin: 15px 0;
+}
+
+#length {
+	position: relative;
+	left: 86px;
+}
+
+#uppercase {
+	position: relative;
+	left: 60px;
+}
+
+#lowercase {
+	position: relative;
+	left: 60px;
+}
+
+#numbers {
+	position: relative;
+	left: 90px;
+}
+
+#symbols {
+	position: relative;
+	left: 93px;
 }

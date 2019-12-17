@@ -16,7 +16,7 @@ const randomFunction = {
     symbol: getRandomSymbol
 }
 
-//eventlistener
+//checks the values of the inputs
 generate.addEventListener("click", () => {
     const length = lengthElement.value;
     const hasLower = lowercaseElement.checked;
@@ -29,7 +29,6 @@ generate.addEventListener("click", () => {
 
 //generate password
 //start password variable
-//filter unchecked types (.filter(item => Object.values(item)[0]);)
 //put password into password var and return
 
 function createPassword(lower, upper, symbol, number, length) {
@@ -39,7 +38,7 @@ function createPassword(lower, upper, symbol, number, length) {
     //Should console log the number of types selected.
     const typesArray = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0]);
     //console.log("typesArray: ", typesArray);
-    //The console log should display an array containing the types selected. If a type isn't selected then it is filtered.
+    //The console log should display an array containing the types selected. If a specific type isn't selected then it is filtered out.
 
     //If nothing is selected return an empty string. I will come back to this with a bootstrap alert.
     if (typesCount === 0) {
@@ -48,7 +47,7 @@ function createPassword(lower, upper, symbol, number, length) {
 
     //loop over the length and call createPassword for each type
     // condition if i is less than the length, increment by the number of checked boxes
-
+    
     for (let i = 0; i < length; i += typesCount) {
         typesArray.forEach(type => {
             const funcName = Object.keys(type)[0];
