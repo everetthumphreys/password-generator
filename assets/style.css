@@ -13,20 +13,22 @@ p {
 	margin: 5px 0px;
 }
 
-h1 {
+h2 {
 	margin: 10px 0px 20px;
 	text-align: center;
 }
 
-input[type=checkbox] {
-	margin-right: 0px;
+.notification-container {
+	height: 100px;
+	margin: auto;
 }
 
-.app-container {
+
+.container {
 	background-color: #355C7D;
 	border: 5px solid #C06C84;
 	padding: 20px;
-	width: 350px;
+	width: 400px;
 	margin: auto;
 }
 
@@ -65,6 +67,6 @@ input[type=checkbox] {
 }
 
 .setting {
-	align-items: center;
+	text-align: center;
 	margin: 15px 0;
 }
