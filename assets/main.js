@@ -15,36 +15,50 @@ const randomFunction = {
     upper: getRandomUpper,
     number: getRandomNumber,
     symbol: getRandomSymbol
-};
+}
 
 //eventlistener
 
 generate.addEventListener("click", () => {
     const length = lengthElement.value;
     const hasLower = lowercaseElement.checked;
-    const hasUpper = lowercaseElement.checked;
-    const hasNumber = lowercaseElement.checked;
-    const hasSymbol = lowercaseElement.checked;
+    const hasUpper = uppercaseElement.checked;
+    const hasNumber = numberElement.checked;
+    const hasSymbol = symbolElement.checked;
 
     resultElement.innertext = createPassword(
-        hasLower, 
-        hasUpper, 
-        hasNumber, 
-        hasSymbol, 
+        hasLower,
+        hasUpper,
+        hasNumber,
+        hasSymbol,
         length);
 });
 
 //generate password
-function createPassword(lower, upper, symbol, number, length) {
     //start password variable
-    //filter unchecked types
+    //filter unchecked types (.filter(item => Object.values(item)[0]);)
     //loop over length call generator per type
     //put password into password var and return
-    let createPassword = "";
 
+function createPassword(
+    lower, 
+    upper, 
+    symbol, 
+    number, 
+    length) {
+    let createPassword = "";
     const typesCount = lower + upper + number + symbol;
-    console.log("typesCount: ", typesCount);
+    const typesArr = [{ lower }, { upper }, { number }, { symbol }].filter(item => Object.values(item)[0]);
+    console.log("typesArr: ", typesArr);
 }
+
+//If nothing is selected return an empty string. I will come back to this with a bootstrap alert.
+
+if(typesCount === 0) {
+    return "";
+}
+
+//functions to pull the correct characters from the table.
 
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
