@@ -1,12 +1,12 @@
 # Password Generator
 
-###Credits:
+### Credits:
 * [Glyph-Icons](https://www.glyphicons.com/)
 * [Wallpaper](https://wallpapersden.com/desert-sun-day-minimalism-wallpaper/2932x2932/)
 * W3schools
 * Bootstrap documentation
 
-###View My Web App
+### View My Web App
 [CLick Here](https://everetthumphreys.github.io/password-generator/)
 
 ### License
