@@ -8,6 +8,7 @@ body {
 	font-family: 'Ubuntu', sans-serif;
 	padding: 10px;
 }
+
 .alert-primary {
 	display: none; 
 	background-color: #355C7D;
@@ -79,6 +80,7 @@ h2 {
 #length {
 	position: relative;
 	left: 86px;
+	padding: 2px;
 }
 
 #uppercase {
