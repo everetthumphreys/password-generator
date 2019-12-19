@@ -13,4 +13,4 @@
 ### License
 Copyright (c) 2019 Everett Humphreys
 
-![Screenshot](https://raw.githubusercontent.com/everetthumphreys/password-generator/master/assets/Screen%20Shot%202019-12-17%20at%208.44.10%20PM.png)
+![Screenshot](https://raw.githubusercontent.com/everetthumphreys/password-generator/master/assets/Screenshot.png)
