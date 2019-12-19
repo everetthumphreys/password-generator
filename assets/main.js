@@ -6,10 +6,8 @@ const symbolElement = document.getElementById("symbols");
 const generateElement = document.getElementById("generate");
 const clipboardElement = document.getElementById("clipboard");
 const lengthElement = document.getElementById("length");
-const resultElement = document.getElementById("result");
-const errorNotification = document.getElementById("error");
-const copied = document.getElementById("copied");
-
+const resultElement = document.getElementById("password");
+const notification = document.getElementById("notification");
 
 const randomFunction = {
     lower: getRandomLower,
@@ -30,7 +28,8 @@ clipboard.addEventListener('click', () => {
 	document.execCommand('copy');
 	textarea.remove();
     //alert('Password copied to clipboard');
-    copied.style["display"] = "block";
+    notification.innerHTML = "Password copied to clipboard!"
+    notification.style.display = "block";
 });
 
 //checks the values of the inputs
@@ -41,14 +40,14 @@ generate.addEventListener("click", () => {
     const hasNumber = numberElement.checked;
     const hasSymbol = symbolElement.checked;
 
-    resultElement.innertext = createPassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
+    resultElement.innerHTML = createPassword(hasLower, hasUpper, hasNumber, hasSymbol, length);
 });
 
 //generate password
 //start password variable
 //put password into password var and return
 
-function createPassword(lower, upper, symbol, number, length) {
+function createPassword(lower, upper, number, symbol, length) {
     let createPassword = "";
     const typesCount = lower + upper + number + symbol;
     //console.log("typesCount: ", typesCount);
@@ -59,8 +58,9 @@ function createPassword(lower, upper, symbol, number, length) {
 
     //If nothing is selected return an empty string. I will come back to this with a bootstrap alert.
     if (typesCount === 0) {
-        return "";
-        //error.style["display"] = "block";
+        notification.innerHTML = "Please select at least one type!"
+        notification.style.display = "block";
+        return "Error";
         //not working
     }
 

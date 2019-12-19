@@ -9,13 +9,7 @@ body {
 	padding: 10px;
 }
 
-#error {
-	display: none; 
-	background-color: #355C7D;
-	color: #ffffff;
-	border-color: #C06C84;
-}
-#copied {
+#notification {
 	display: none; 
 	background-color: #355C7D;
 	color: #ffffff;
@@ -50,9 +44,10 @@ h2 {
 	position: relative;
 	font-size: 18px;
 	letter-spacing: 1px;
-	padding: 12px 10px;
-	height: 50px;
+	padding: 12px 50px 12px 10px;
+	min-height: 50px;
 	width: 100%;
+	word-break: break-all;
 }
 
 .result-container .btn {

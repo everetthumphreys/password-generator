@@ -8,6 +8,7 @@
     <link href="https://fonts.googleapis.com/css?family=Ubuntu&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
         integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/style.css" rel="stylesheet">
     <script defer src="assets/main.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -26,13 +27,8 @@
     <div class="container-fluid">
         <header></header>
         <nav></nav>
-        <div>
             <div class="notification-container">
-                <div class="alert alert-primary" role="alert" id="error">
-                    You must select at least one character type!
-                </div>
-                <div class="alert alert-primary" role="alert" id="copied">
-                    Password copied to clipboard!
+                <div class="alert alert-primary" role="alert" id="notification">
                 </div>
             </div>
             <main>
@@ -42,8 +38,9 @@
                             <h2>Password Generator</h2>
                             <div class="result-container">
                                 <span id="result">
+                                    <span id="password"></span>
                                     <button type="button" class="btn btn-default" aria-label="Copy" id="clipboard">
-                                        <span class="glyphicon glyphicon-copy" aria-hidden="false"></span>
+                                        <span class="fa fa-clipboard" aria-hidden="false"></span>
                                     </button>
                                 </span>
                             </div>
@@ -80,7 +77,6 @@
                     </button>
                 </div>
             </main>
-        </div>
     </div>
     <footer></footer>
 </body>
