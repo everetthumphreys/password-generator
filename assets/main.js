@@ -30,7 +30,9 @@ clipboard.addEventListener('click', () => {
     //alert('Password copied to clipboard');
     notification.innerHTML = "Password copied to clipboard!"
     notification.style.display = "block";
+    //This adds wraps my password in a text area, selects the text, copies it, removes the text area, and then activates the notification.
 });
+
 
 //checks the values of the inputs
 generate.addEventListener("click", () => {
@@ -61,7 +63,7 @@ function createPassword(lower, upper, number, symbol, length) {
         notification.innerHTML = "Please select at least one type!"
         notification.style.display = "block";
         return "Error";
-        //not working
+        //This will display a notification and return Error in the box.
     }
 
     //loop over the length and call createPassword for each type
