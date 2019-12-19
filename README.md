@@ -1,10 +1,11 @@
 # Password Generator
 
 ### Credits:
-* [Glyph-Icons](https://www.glyphicons.com/)
+* [Font Awesome](https://fontawesome.com/)
 * [Wallpaper](https://wallpapersden.com/desert-sun-day-minimalism-wallpaper/2932x2932/)
 * W3schools
 * Bootstrap documentation
+* Traversy Media Javascript Tutorials
 
 ### View My Web App
 [Click Here](https://everetthumphreys.github.io/password-generator/)
