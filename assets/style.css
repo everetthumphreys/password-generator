@@ -9,7 +9,13 @@ body {
 	padding: 10px;
 }
 
-.alert-primary {
+#error {
+	display: none; 
+	background-color: #355C7D;
+	color: #ffffff;
+	border-color: #C06C84;
+}
+#copied {
 	display: none; 
 	background-color: #355C7D;
 	color: #ffffff;

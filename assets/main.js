@@ -7,6 +7,8 @@ const generateElement = document.getElementById("generate");
 const clipboardElement = document.getElementById("clipboard");
 const lengthElement = document.getElementById("length");
 const resultElement = document.getElementById("result");
+const errorNotification = document.getElementById("error");
+const copied = document.getElementById("copied");
 
 
 const randomFunction = {
@@ -15,6 +17,21 @@ const randomFunction = {
     number: getRandomNumber,
     symbol: getRandomSymbol
 }
+
+clipboard.addEventListener('click', () => {
+	const textarea = document.createElement('textarea');
+	const password = resultElement.innerText;
+	
+	if(!password) { return; }
+	
+	textarea.value = password;
+	document.body.appendChild(textarea);
+	textarea.select();
+	document.execCommand('copy');
+	textarea.remove();
+    //alert('Password copied to clipboard');
+    copied.style["display"] = "block";
+});
 
 //checks the values of the inputs
 generate.addEventListener("click", () => {
@@ -43,6 +60,8 @@ function createPassword(lower, upper, symbol, number, length) {
     //If nothing is selected return an empty string. I will come back to this with a bootstrap alert.
     if (typesCount === 0) {
         return "";
+        //error.style["display"] = "block";
+        //not working
     }
 
     //loop over the length and call createPassword for each type
@@ -68,19 +87,19 @@ function createPassword(lower, upper, symbol, number, length) {
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
 }
+// console.log(getRandomLower());
 function getRandomUpper() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 65);
 }
+// console.log(getRandomUpper());
 function getRandomNumber() {
     return String.fromCharCode(Math.floor(Math.random() * 10) + 48);
 }
+// console.log(getRandomNumber());
 function getRandomSymbol() {
     const symbols = "!@#$%^&*()-+={}[],.?/;:";
     return symbols[Math.floor(Math.random() * symbols.length)];
 }
-// console.log(getRandomLower());
-// console.log(getRandomUpper());
-// console.log(getRandomNumber());
 // console.log(getRandomSymbol());
 //These demonstrate that my functions successfully log the appropriate characters.
 

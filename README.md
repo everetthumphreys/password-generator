@@ -7,7 +7,7 @@
 * Bootstrap documentation
 
 ### View My Web App
-[CLick Here](https://everetthumphreys.github.io/password-generator/)
+[Click Here](https://everetthumphreys.github.io/password-generator/)
 
 ### License
 Copyright (c) 2019 Everett Humphreys
